@@ -1,208 +1,214 @@
-# 👔 HireMate Multi-Agent System
+# 🎭 Company Agents - AI-Powered Multi-Agent Company System
 
-> 🤖 **26 AI Agents | 6 Departments | 1 Vision**
+<p align="center">
+  <img src="https://img.shields.io/badge/Agents-26-blue?style=for-the-badge" alt="26 Agents">
+  <img src="https://img.shields.io/badge/Departments-6-green?style=for-the-badge" alt="6 Departments">
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Active">
+</p>
 
-Your complete AI-powered company system where agents collaborate, talk to each other, and build your startup automatically.
+> **Your complete AI-powered company system. 26 agents work together, talk to each other, and build your startup automatically.**
 
 ---
 
 ## 🎯 What Is This?
 
-HireMate is an **autonomous AI agent company** with 26 specialized agents that:
-- 🤝 **Collaborate** - Agents talk to each other
-- 🛡️ **Apply Smart Defaults** - When you don't know, they decide
-- ✅ **Quality Gates** - Security, design, performance checks
-- 📋 **Share Context** - All agents see the same project data
+Company Agents is an **autonomous AI agent company framework** where specialized AI agents:
+- 🤝 **Collaborate** - Agents communicate and share context
+- 🛡️ **Smart Defaults** - Intelligent choices when you don't know
+- ✅ **Quality Gates** - Security, design, and performance checks
+- 📊 **Unified Config** - Single source of truth for all agents
 
 ---
 
-## 🏗️ Quick Start
+## 🚀 Quick Start
 
-### 1️⃣ Choose Your Agent
 ```bash
-# Copy any agent file and paste into your AI assistant
+# 1. Clone the repo
+git clone https://github.com/sagar-coder29/Company-Agents.git
 
-agents/executive/CEO.md        # Vision & strategy
-agents/engineering/CTO.md       # Tech decisions
-agents/product/Product_Manager.md # Features
-agents/marketing/CMO.md        # Marketing
+# 2. Choose an agent
+cat agents/executive/CEO.md
+
+# 3. Paste into your AI assistant
+
+# 4. Start building!
 ```
 
-### 2️⃣ Answer (or Skip) Setup Questions
-```
-Company Name: [Your Name]
-Tech Stack: [Your choice or default]
+---
 
-# If you say "don't know" → Smart defaults applied
-# If you say "yes/all" → Full features included
-# If you say "no" → Minimal version
-```
+## 🏗️ Architecture
 
-### 3️⃣ Start Building
 ```
-You: Build our auth system
-Agent: Applying defaults... (JWT + Google OAuth)
-      Notifying other agents...
+┌─────────────────────────────────────────────────────────────────┐
+│                      USER / PROJECT OWNER                         │
+└─────────────────────────┬───────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                      PROJECT.md (Setup)                          │
+│              Company basics, tech stack, features                 │
+└─────────────────────────┬───────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                      AGENT NETWORK                                │
+│                                                                  │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐        │
+│  │  Executive  │◄──►│ Engineering │◄──►│  Marketing   │        │
+│  │   (3)      │    │   (10)      │    │   (5)       │        │
+│  └──────┬──────┘    └──────┬──────┘    └──────┬──────┘        │
+│         │                   │                   │                │
+│         └───────────────────┼───────────────────┘                │
+│                             ▼                                    │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐        │
+│  │   Product   │◄──►│   Sales     │◄──►│  Operations │        │
+│  │   (2)      │    │   (4)       │    │   (2)       │        │
+│  └─────────────┘    └─────────────┘    └─────────────┘        │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
 ## 👥 Agent Directory
 
-### 🏢 Executive (3)
-| Emoji | Role | Does |
-|--------|------|-------|
-| 🤵 | CEO | Vision, strategy, OKRs |
-| 💰 | CFO | Finance, burn rate |
-| ⚙️ | COO | Operations, scaling |
+### 🏢 Executive (3 Agents)
+| Emoji | Role | File | Responsibility |
+|-------|------|------|----------------|
+| 🤵 | CEO | `executive/CEO.md` | Vision, strategy, OKRs |
+| 💰 | CFO | `executive/CFO.md` | Finance, burn rate |
+| ⚙️ | COO | `executive/COO.md` | Operations, scaling |
 
-### 💻 Engineering (10)
-| Emoji | Role | Does |
-|--------|------|-------|
-| 🧠 | CTO | Architecture, tech stack |
-| 🎨 | Frontend Lead | UI, components |
-| ⚛️ | React Dev | React implementation |
-| 🔌 | API Dev | REST API, endpoints |
-| 🗄️ | Backend Lead | Server, database |
-| 🛢️ | Database Eng | Schema, optimization |
-| 🚀 | DevOps | CI/CD, deployment |
-| ☁️ | Cloud Eng | AWS/GCP setup |
-| 🔐 | Auth Security | Security, compliance |
-| 📱 | Mobile Dev | iOS/Android |
+### 💻 Engineering (10 Agents)
+| Emoji | Role | File | Responsibility |
+|-------|------|------|----------------|
+| 🧠 | CTO | `engineering/CTO.md` | Architecture, tech decisions |
+| 🎨 | Frontend Lead | `engineering/Frontend_Lead.md` | UI architecture |
+| ⚛️ | React Dev | `engineering/React_Developer.md` | React implementation |
+| 🔌 | API Dev | `engineering/API_Developer.md` | REST API, endpoints |
+| 🗄️ | Backend Lead | `engineering/Backend_Lead.md` | Server, database |
+| 🛢️ | Database Eng | `engineering/Database_Engineer.md` | Schema, optimization |
+| 🚀 | DevOps | `engineering/DevOps_Engineer.md` | CI/CD, deployment |
+| ☁️ | Cloud Eng | `engineering/Cloud_Infrastructure.md` | Cloud setup |
+| 🔐 | Auth Security | `engineering/Auth_Security_Specialist.md` | Security |
+| 📱 | Mobile Dev | `engineering/Mobile_Developer.md` | iOS/Android |
 
-### 📢 Marketing (5)
-| Emoji | Role | Does |
-|--------|------|-------|
-| 📣 | CMO | Strategy, brand |
-| 📈 | Growth | Acquisition, viral |
-| ✍️ | Content | Blog, SEO, social |
-| 🔍 | SEO | Search rankings |
-| 💵 | Paid Ads | PPC campaigns |
+### 📢 Marketing (5 Agents)
+| Emoji | Role | File | Responsibility |
+|-------|------|------|----------------|
+| 📣 | CMO | `marketing/CMO.md` | Strategy, brand |
+| 📈 | Growth | `marketing/Growth_Marketer.md` | Acquisition, viral |
+| ✍️ | Content | `marketing/Content_Strategist.md` | Blog, SEO, social |
+| 🔍 | SEO | `marketing/SEO_Specialist.md` | Search optimization |
+| 💵 | Paid Ads | `marketing/Paid_Ads_Manager.md` | PPC campaigns |
 
-### 💰 Sales (4)
-| Emoji | Role | Does |
-|--------|------|-------|
-| 🎯 | Head of Sales | Pipeline, targets |
-| 📞 | SDR | Prospecting |
-| 🤝 | Account Exec | Closing deals |
-| 💚 | Customer Success | Retention |
+### 💰 Sales (4 Agents)
+| Emoji | Role | File | Responsibility |
+|-------|------|------|----------------|
+| 🎯 | Head of Sales | `sales/Head_of_Sales.md` | Pipeline, targets |
+| 📞 | SDR | `sales/SDR.md` | Prospecting |
+| 🤝 | Account Exec | `sales/Account_Executive.md` | Closing deals |
+| 💚 | Customer Success | `sales/Customer_Success.md` | Retention |
 
-### 🎨 Product (2)
-| Emoji | Role | Does |
-|--------|------|-------|
-| 📋 | Product Manager | Roadmap, priorities |
-| 🎨 | Product Designer | UX/UI |
+### 🎨 Product (2 Agents)
+| Emoji | Role | File | Responsibility |
+|-------|------|------|----------------|
+| 📋 | Product Manager | `product/Product_Manager.md` | Roadmap, priorities |
+| 🎨 | Product Designer | `product/Product_Designer.md` | UX/UI design |
 
-### ⚙️ Operations (2)
-| Emoji | Role | Does |
-|--------|------|-------|
-| 🔄 | Ops Manager | Efficiency, automation |
-| 🎧 | Support Lead | Helpdesk, SLAs |
+### ⚙️ Operations (2 Agents)
+| Emoji | Role | File | Responsibility |
+|-------|------|------|----------------|
+| 🔄 | Ops Manager | `operations/Operations_Manager.md` | Automation |
+| 🎧 | Support Lead | `operations/Customer_Support_Lead.md` | Helpdesk |
 
 ---
 
 ## 🔄 How Agents Talk
 
+### Communication Flow
 ```
-👤 USER: "Add booking feature"
+USER: "Build a booking feature"
 
          ┌─────────────────┐
          │  PRODUCT MANAGER │
          │  Breaks it down  │
          └────────┬────────┘
                   │
-    ┌─────────────┼─────────────┐
-    │             │             │
-    ▼             ▼             ▼
-┌────────┐  ┌────────┐  ┌────────┐
-│ DESIGN │  │  API   │  │ FRONTEND│
-│ Create │  │ Design │  │ Build   │
-│  UI    │  │ Endpoints│  │ Components│
-└───┬────┘  └───┬────┘  └───┬────┘
-    │           │           │
-    └───────────┴───────────┘
-                │
-                ▼
-         ┌─────────────┐
-         │    QA       │
-         │   Test      │
-         └─────────────┘
+        ┌────────┼────────┐
+        │        │        │
+        ▼        ▼        ▼
+    ┌────────┐ ┌────────┐ ┌────────┐
+    │ DESIGN │ │  API   │ │FRONTEND│
+    │ Create │ │ Design │ │ Build  │
+    │   UI   │ │Endpoints│ │Components│
+    └────┬───┘ └───┬────┘ └───┬────┘
+         │         │         │
+         └─────────┼─────────┘
+                   ▼
+            ┌─────────────┐
+            │     QA      │
+            │   Test      │
+            └─────────────┘
 ```
+
+### Message Types
+| Type | Purpose | Example |
+|------|---------|---------|
+| REQUEST | Need something from another agent | "Need API endpoint for bookings" |
+| INFO | Share completed work | "Worker profile component done" |
+| APPROVAL | Need sign-off | "Ready for production deployment" |
+| BLOCKER | Can't proceed | "Need database schema first" |
+| UPDATE | Progress report | "Sprint status update" |
+
+### Quality Gates
+| Gate | Agents | Purpose |
+|------|--------|---------|
+| 📋 Requirements | PM, CTO, Designer | Feature specs |
+| 🎨 Design | Designer, Frontend | UX approval |
+| ⚡ Code | Tech Lead, Peer | Quality check |
+| 🔒 Security | Auth Security | Vulnerability scan |
+| ✅ QA | QA, PM | Testing validation |
+| 🚀 Launch | CEO, CTO | Final approval |
 
 ---
 
 ## 🛡️ Smart Defaults
 
-When you **don't know** or say **"no"**:
+When you **don't know** or say **"no"**, agents apply intelligent defaults:
 
-| You Say | Default Applied |
-|---------|----------------|
-| Tech stack | React + Tailwind + Django |
-| Design | Glassmorphism (purple/green) |
-| Auth | JWT + Google OAuth |
+### Default Stack
+| Component | Default |
+|-----------|---------|
+| Frontend | React + Tailwind CSS |
+| Backend | Django + Python |
 | Database | SQLite → PostgreSQL |
-| Budget | Minimal (lean startup) |
-| Timeline | 3-month MVP |
-| Features | Core MVP (YAGNI) |
-| Security | Standard protection |
-| Marketing | Organic + social only |
+| Auth | JWT + Google OAuth |
+| Hosting | Vercel + Railway |
+| Design | Glassmorphism (purple/green) |
 
-### Examples
+### Decision Matrix
+| Input | Result |
+|-------|--------|
+| "yes" / "all" | ✅ Full feature |
+| "no" / "skip" | ❌ Feature removed |
+| "don't know" | 🛡️ Smart default |
+| blank | 🛡️ Smart default |
 
+### Example Conversations
 ```
-USER: "Build the backend (don't know tech)"
+USER: Build the backend (I don't know tech)
 AGENT: ✅ Django + Python
        ✅ SQLite dev, PostgreSQL prod
-       ✅ REST API
-       ✅ JWT auth
+       ✅ REST API with JWT
+       ✅ Standard security
 
-USER: "Skip the review system"
+USER: Skip the review system
 AGENT: ❌ Reviews disabled
 
-USER: "We want everything"
+USER: We want everything
 AGENT: ✅ Full auth (email + social + MFA)
-       ✅ All features
+       ✅ All features included
        ✅ Premium design
-```
-
----
-
-## 💬 Conversation Flow
-
-### New Feature Request
-```
-CEO: "New feature: Worker video portfolio"
-     │
-     ├──→ PM: Scope it
-     ├──→ CTO: Plan infrastructure
-     ├──→ Designer: Create video UI
-     └──→ Security: Content safety
-```
-
-### Unknown Tech Question
-```
-USER: "What should we use for auth?"
-AGENT: Applying defaults:
-       ✅ Email/Password
-       ✅ Google OAuth
-       ✅ JWT tokens
-       ✅ Standard security
-```
-
-### Quality Gate Check
-```
-API Dev: Implementing file upload
-        │
-        ▼
-Auth Security: Review security
-              │
-              ▼
-Security Issues: [ ] File validation
-                 [ ] Size limits
-                 [ ] Virus scan
-              │
-              ▼
-✅ APPROVED (or fixes requested)
 ```
 
 ---
@@ -210,35 +216,83 @@ Security Issues: [ ] File validation
 ## 📁 File Structure
 
 ```
-hiremate2/
-├── 📄 README.md              ← You are here
-├── 📋 PROJECT.md             ← Setup (fill once)
+Company-Agents/
+├── 📄 README.md                    ← You are here
+├── 📋 PROJECT.md                   ← Company setup config
 │
-├── 👔 executive/            ← CEO, CFO, COO
-├── 💻 engineering/          ← CTO, Devs
-├── 📢 marketing/            ← CMO, Growth
-├── 💰 sales/                ← Sales team
-├── 🎨 product/              ← PM, Designer
-├── ⚙️ operations/          ← Ops, Support
+├── 👔 executive/                  ← 3 agents
+│   ├── CEO.md
+│   ├── CFO.md
+│   └── COO.md
 │
-├── 🔧 companion/            ← Utilities
-│   ├── COMMUNICATION.md     ← How agents talk
-│   └── DEFAULTS.md         ← Smart defaults
+├── 💻 engineering/                ← 10 agents
+│   ├── CTO.md
+│   ├── Frontend_Lead.md
+│   ├── React_Developer.md
+│   ├── API_Developer.md
+│   ├── Backend_Lead.md
+│   ├── Database_Engineer.md
+│   ├── DevOps_Engineer.md
+│   ├── Cloud_Infrastructure.md
+│   ├── Auth_Security_Specialist.md
+│   └── Mobile_Developer.md
 │
-└── 🌐 hiremate-website/    ← Built website
+├── 📢 marketing/                ← 5 agents
+│   ├── CMO.md
+│   ├── Growth_Marketer.md
+│   ├── Content_Strategist.md
+│   ├── SEO_Specialist.md
+│   └── Paid_Ads_Manager.md
+│
+├── 💰 sales/                      ← 4 agents
+│   ├── Head_of_Sales.md
+│   ├── SDR.md
+│   ├── Account_Executive.md
+│   └── Customer_Success.md
+│
+├── 🎨 product/                   ← 2 agents
+│   ├── Product_Manager.md
+│   └── Product_Designer.md
+│
+├── ⚙️ operations/               ← 2 agents
+│   ├── Operations_Manager.md
+│   └── Customer_Support_Lead.md
+│
+└── 🔧 companion/                ← Utilities
+    ├── COMMUNICATION.md          ← How agents talk
+    └── DEFAULTS.md              ← Smart defaults
 ```
 
 ---
 
-## 🚀 Commands
+## 🎓 Usage Examples
 
-| Command | Agent | What Happens |
-|---------|-------|--------------|
-| `status` | Any | Report current work |
-| `architecture` | CTO | Show tech stack |
-| `roadmap` | PM | Show 3-month plan |
-| `marketing-plan` | CMO | Show strategy |
-| `defaults` | Any | Show applied defaults |
+### Single Agent (Quick Task)
+```bash
+# Copy the agent file
+cat agents/engineering/React_Developer.md
+
+# Paste into Claude, ChatGPT, or any AI assistant
+# Ask your question
+```
+
+### Multi-Agent (Complex Project)
+```bash
+# 1. Start with CEO for vision
+# 2. Add CTO for architecture
+# 3. Bring in specialists
+# 4. Agents coordinate automatically
+```
+
+### Full Company (Startup)
+```bash
+# 1. CEO sets OKRs
+# 2. CTO builds tech roadmap
+# 3. CMO creates marketing plan
+# 4. Head of Sales sets pipeline
+# 5. PM manages priorities
+# 6. Weekly syncs between agents
+```
 
 ---
 
@@ -250,65 +304,43 @@ hiremate2/
 | 🏢 Departments | 6 |
 | 📁 Agent Files | 26 |
 | 📝 Companion Files | 2 |
-
----
-
-## 🎓 Usage Examples
-
-### Single Agent (Quick Task)
-```markdown
-1. Copy React_Developer.md
-2. Paste into AI assistant
-3. Ask your question
-```
-
-### Multi-Agent (Complex)
-```markdown
-1. Start with CEO (vision)
-2. Add CTO (architecture)
-3. Bring in specialists
-4. Agents coordinate
-```
-
-### Full Company (Startup)
-```markdown
-1. CEO sets OKRs
-2. CTO builds roadmap
-3. CMO creates launch plan
-4. PM manages priorities
-5. Weekly syncs
-```
+| 📄 Total Files | 31 |
 
 ---
 
 ## 🛠️ Built With
 
-- **AI**: Claude, GPT, any LLM
-- **Frontend**: React + Tailwind + Vite
-- **Backend**: Django + Python
-- **Database**: SQLite → PostgreSQL
-- **Design**: Glassmorphism
+| Category | Tools |
+|----------|-------|
+| 🤖 AI | Claude, GPT, any LLM |
+| 💻 Frontend | React, Tailwind CSS |
+| ⚙️ Backend | Django, Python |
+| 🗄️ Database | SQLite, PostgreSQL |
+| 📦 Deploy | Vercel, Railway |
+| 🎨 Design | Figma, Glassmorphism |
 
 ---
 
 ## 🤝 Contributing
 
 1. Fork the repo
-2. Copy an agent as template
+2. Copy an existing agent as template
 3. Customize for your role
-4. Update this README
-5. Submit changes
+4. Update README if adding agents
+5. Submit PR
 
 ---
 
 ## 📄 License
 
-MIT - Use freely!
+MIT License - Use freely for your startup!
 
 ---
 
 <p align="center">
-  <strong>HireMate - Your AI-Powered Company</strong>
+  <strong>Company Agents - Your AI-Powered Company</strong>
   <br>
   🤖 26 Agents | 🏢 6 Departments | 🎯 1 Vision
+  <br>
+  <a href="https://github.com/sagar-coder29/Company-Agents">GitHub</a>
 </p>
